@@ -6,6 +6,7 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 env = environ.Env()
+CHAPA_SECRET_KEY = os.getenv("CHAPA_SECRET_KEY", "your-sandbox-secret-key")
 
 # Explicitly read .env from BASE_DIR
 env_file = BASE_DIR / '.env'
